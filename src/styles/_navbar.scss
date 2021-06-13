@@ -1,0 +1,67 @@
+/** @format */
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.75rem 2rem;
+	background: $offWhite;
+	z-index: 1;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		outline: none;
+	}
+	&__icon {
+		font-size: 1.5rem;
+		color: $primaryColor;
+	}
+	&__links {
+		height: 0;
+		overflow: hidden;
+		transition: $mainTransition;
+		list-style-type: none;
+		@include breakpoint-up(large) {
+			height: auto;
+			display: flex;
+			margin-left: 4rem;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 1rem 0;
+			color: $mainBlack;
+			text-align: center;
+			font-size: 1rem;
+			font-weight: 600;
+			letter-spacing: $mainSpacing;
+			transition: $mainTransition;
+
+			&:hover {
+				color: $primaryColor;
+			}
+
+			@include breakpoint-up(large) {
+				margin: 0rem 1rem;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+	&__show {
+		height: 100px;
+	}
+	&__center {
+		@include breakpoint-up(large) {
+			max-width: 1170px;
+			margin: 0 auto;
+			display: flex;
+		}
+	}
+}

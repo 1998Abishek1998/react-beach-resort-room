@@ -1,0 +1,53 @@
+/** @format */
+
+.defaultHero,
+.roomsHero {
+	min-height: calc(100vh - 66px);
+	background: url("../images/defaultBcg.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.roomsHero {
+	background-image: url("../images/room-9.jpeg");
+	min-height: 80vh;
+}
+.banner {
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.5);
+	color: $mainWhite;
+	padding: 2rem 1rem;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: $mainSpacing;
+
+	@include breakpoint-up(large) {
+		padding: 2rem 6rem;
+	}
+	@include breakpoint-up(small) {
+		padding: 2rem 3rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+
+		@include breakpoint-up(large) {
+			font-size: 4rem;
+		}
+		@include breakpoint-up(small) {
+			font-size: 3rem;
+		}
+	}
+	div {
+		width: 10rem;
+		height: 5px;
+		background: $primaryColor;
+		margin: 1.7rem auto;
+	}
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+}
